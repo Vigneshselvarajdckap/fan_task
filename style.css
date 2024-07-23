@@ -1,0 +1,122 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.fan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+.fan .head{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circule{
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(250, 250, 250);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.leaf{
+    width: 100%;
+    height: 10px;
+    /* position: absolute; */
+    /* left: 30px; */
+}
+
+.round{
+    width: 70px;
+    height: 70px;
+    background-color: darkgray;
+    border-radius: 50%;
+    position: absolute;
+    left: 115px;
+    bottom: -29px;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3), 10px 0 15px rgba(0, 0, 0, 0.3);
+}
+.leaf .left{
+    height: 15px;
+    width: 100%;
+    background-image: linear-gradient(to right,darkgray, rgb(228, 228, 228));
+    box-shadow: -15px 0 10px rgba(0, 0, 0, 0.3), 15px 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.leaf .right{
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-image: linear-gradient(to right,darkgray, rgb(228, 228, 228));
+    box-shadow: -15px 0 10px rgba(0, 0, 0, 0.3), 15px 0 10px rgba(0, 0, 0, 0.3);
+    transform: rotate(90deg);
+    border-radius: 10px;
+    z-index: -1;
+}
+.piller{
+    height: 300px;
+    width: 30px;
+    background-color: red;
+}
+
+@keyframes leaf-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.three {
+    will-change: filter;
+    transition: filter 100ms;
+    animation: leaf-rotate infinite 0.1s linear;
+}
+
+.two {
+    will-change: filter;
+    transition: filter 100ms;
+    animation: leaf-rotate infinite 0.8s linear;
+}
+
+.one {
+    will-change: filter;
+    transition: filter 100ms;
+    animation: leaf-rotate infinite 2s linear;
+}
+
+.leaf {
+    will-change: filter;
+    transition: filter 100ms;
+    /* animation: leaf-rotate infinite 0.1s linear; */
+}
+
+
+.button-box{
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button{
+    padding: 10px;
+    border: none;
+    background: none;
+}
